@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awafia | Premium Vending & Gourmet Coffee</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap');
+        
+        :root {
+            --espresso: #1a0f0a;
+            --gold: #c5a059;
+            --cream: #f9f5f0;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--cream); color: var(--espresso); }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        /* Mathematically Locked Infinite Loop */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-inner {
+            display: flex;
+            width: max-content;
+            animation: scroll 25s linear infinite;
+        }
+        .marquee-inner:hover { animation-play-state: paused; }
+
+        .whatsapp-pulse {
+            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 bg-[#1a0f0a]/95 backdrop-blur-md text-white py-5 px-8 flex justify-between items-center border-b border-[#c5a059]/20">
+        <div class="text-2xl font-bold tracking-[0.2em] uppercase text-[#c5a059]">Awafia</div>
+        <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.2em] font-semibold">
+            <a href="index.html" class="text-[#c5a059]">Home</a>
+            <a href="about.html" class="hover:text-[#c5a059] transition">About</a>
+            <a href="products.html" class="hover:text-[#c5a059] transition">Machines</a>
+            <a href="drinks.html" class="hover:text-[#c5a059] transition">Roastery</a>
+            <a href="contact.html" class="hover:text-[#c5a059] transition">Contact</a>
+        </div>
+    </nav>
+
+    <section class="relative h-[90vh] flex items-center justify-center overflow-hidden bg-[#1a0f0a]">
+        <div class="absolute inset-0 opacity-50 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80');"></div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-5xl md:text-8xl text-white mb-6 opacity-0 translate-y-10" id="hero-title">
+                The Art of <span class="text-[#c5a059]">Vending.</span>
+            </h1>
+            <p class="text-[#c5a059] uppercase tracking-[0.4em] text-xs md:text-sm mb-12 opacity-0" id="hero-sub">Exclusive Middle East Manufacturer</p>
+            <div class="flex flex-col md:flex-row justify-center gap-6 opacity-0" id="hero-btn">
+                <a href="products.html" class="px-10 py-4 bg-[#c5a059] text-[#1a0f0a] font-bold uppercase text-xs tracking-widest hover:bg-white transition duration-500">View Catalog</a>
+                <a href="contact.html" class="px-10 py-4 border border-[#c5a059] text-[#c5a059] font-bold uppercase text-xs tracking-widest hover:bg-[#c5a059] hover:text-[#1a0f0a] transition duration-500">Inquiry</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-[#c5a059] py-6 overflow-hidden border-y border-[#1a0f0a]/10">
+        <div class="marquee-inner">
+            <div class="flex items-center">
+                <span class="mx-16 text-[#1a0f0a] font-bold uppercase tracking-widest text-[11px]">Dubai / UAE</span>
+                <span class="mx-16 text-[#1a0f0a] font-bold uppercase tracking-widest text-[11px]">Doha / Qatar</span>
+                <span class="mx-16 text-[#1a0f0a] font-bold uppercase tracking-widest text-[11px]">Muscat / Oman</span>
+                <span class="mx-16 text-[#1a0f0a] font-bold uppercase tracking-widest text-[11px]">Riyadh / Saudi Arabia</span>
+            </div>
+            <div class="flex items-center">
+                <span class="mx-16 text-[#1a0f0a] font-bold uppercase tracking-widest text-[11px]">Dubai / UAE</span>
+                <span class="mx-16 text-[#1a0f0a] font-bold uppercase tracking-widest text-[11px]">Doha / Qatar</span>
+                <span class="mx-16 text-[#1a0f0a] font-bold uppercase tracking-widest text-[11px]">Muscat / Oman</span>
+                <span class="mx-16 text-[#1a0f0a] font-bold uppercase tracking-widest text-[11px]">Riyadh / Saudi Arabia</span>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-32 px-8 max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+        <div class="gsap-reveal-left">
+            <h2 class="text-4xl md:text-6xl mb-8 leading-tight">Beyond a Machine:<br><span class="text-[#c5a059] italic text-3xl md:text-5xl">The Handshake Philosophy</span></h2>
+            <p class="text-base leading-relaxed text-gray-600 mb-10 max-w-lg">
+                Awafia is more than a supplier. We are exclusive manufacturers of fresh-roast, gourmet coffee ecosystems. Each machine is engineered to ensure that "European Café" experience is delivered in every cup.
+            </p>
+            <a href="about.html" class="inline-block text-[#c5a059] font-bold uppercase tracking-[0.2em] text-[11px] border-b-2 border-[#c5a059] pb-2 hover:text-[#1a0f0a] hover:border-[#1a0f0a] transition-all">Discover Our Story</a>
+        </div>
+        <div class="relative gsap-reveal-right">
+            <div class="absolute -top-6 -right-6 w-full h-full border border-[#c5a059]/30 z-0"></div>
+            <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&q=80" alt="Vending Excellence" class="relative z-10 w-full transition duration-1000 shadow-xl">
+        </div>
+    </section>
+
+    <section class="bg-[#1a0f0a] text-white py-32 px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-baseline mb-20 gap-4">
+                <h2 class="text-4xl md:text-5xl text-[#c5a059]">The Collection</h2>
+                <a href="products.html" class="text-[10px] uppercase tracking-[0.3em] text-gray-400 hover:text-[#c5a059] transition">Explore Full Catalog &rarr;</a>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="group border border-white/5 p-10 hover:bg-[#c5a059]/5 transition-all duration-500 gsap-reveal">
+                    <span class="text-[#c5a059] text-[10px] font-bold uppercase tracking-widest">01. Bean-to-Cup</span>
+                    <h3 class="text-2xl mt-6 mb-6">Brizta Series</h3>
+                    <div class="overflow-hidden bg-white/5 rounded-sm">
+                        <img src="images/Brizta.png" class="w-full h-80 object-contain transition duration-700 group-hover:scale-110">
+                    </div>
+                </div>
+                <div class="group border border-white/5 p-10 hover:bg-[#c5a059]/5 transition-all duration-500 gsap-reveal">
+                    <span class="text-[#c5a059] text-[10px] font-bold uppercase tracking-widest">02. Fresh Brew</span>
+                    <h3 class="text-2xl mt-6 mb-6">Minifresh Line</h3>
+                    <div class="overflow-hidden bg-white/5 rounded-sm">
+                        <img src="images/brizta-26.png" class="w-full h-80 object-contain transition duration-700 group-hover:scale-110">
+                    </div>
+                </div>
+                <div class="group border border-white/5 p-10 hover:bg-[#c5a059]/5 transition-all duration-500 gsap-reveal">
+                    <span class="text-[#c5a059] text-[10px] font-bold uppercase tracking-widest">03. Smart Vending</span>
+                    <h3 class="text-2xl mt-6 mb-6">Awafia Snack</h3>
+                    <div class="overflow-hidden bg-white/5 rounded-sm">
+                        <img src="images/awafiasnack.png" class="w-full h-80 object-contain transition duration-700 group-hover:scale-110">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-[#1a0f0a] border-y border-[#c5a059]/20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-8 mb-16 text-center">
+            <h4 class="text-[#c5a059] uppercase tracking-[0.4em] text-[10px] font-bold">Trusted by Regional Leaders</h4>
+        </div>
+        <div class="marquee-inner">
+            <div class="flex items-center space-x-24 px-12">
+                <img src="images/Eand.svg.png" class="h-10 opacity-90 transition" alt="Etisalat">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Emirates_logo.svg" class="h-12 opacity-90 transition" alt="Emirates">
+                <span class="text-xl font-black text-[#c5a059] tracking-tighter uppercase">Dubai Holding</span>
+            </div>
+            <div class="flex items-center space-x-24 px-12">
+                <img src="images/Eand.svg.png" class="h-10 opacity-90 transition" alt="Etisalat">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Emirates_logo.svg" class="h-12 opacity-90 transition" alt="Emirates">
+                <span class="text-xl font-black text-[#c5a059] tracking-tighter uppercase">Dubai Holding</span>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/971555566247" target="_blank" class="fixed bottom-8 right-8 z-[100] bg-[#25D366] w-16 h-16 rounded-full flex items-center justify-center shadow-2xl whatsapp-pulse group hover:scale-110 transition duration-300">
+        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <footer class="bg-[#1a0f0a] text-white pt-24 pb-12 border-t border-[#c5a059]/10">
+        <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-4 gap-12 md:gap-16">
+            <div class="space-y-8">
+                <div class="text-2xl font-bold tracking-widest text-[#c5a059]">AWAFIA</div>
+                <p class="text-gray-500 text-xs leading-loose">The exclusive manufacturer and supplier of fresh roast gourmet coffees and premium vending systems.</p>
+            </div>
+            <div>
+                <h4 class="text-[#c5a059] font-bold mb-6 uppercase tracking-widest text-[10px]">Product Line</h4>
+                <ul class="space-y-3 text-gray-500 text-xs font-medium tracking-wider">
+                    <li><a href="products.html" class="hover:text-[#c5a059] transition uppercase">Minifresh Series</a></li>
+                    <li><a href="products.html" class="hover:text-[#c5a059] transition uppercase">Brizta Series</a></li>
+                    <li><a href="products.html" class="hover:text-[#c5a059] transition uppercase">Snack Vending</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[#c5a059] font-bold mb-6 uppercase tracking-widest text-[10px]">Headquarters</h4>
+                <div class="text-gray-500 text-xs leading-relaxed space-y-4">
+                    <p>Al Qusais, P.O Box 183659 <br>Dubai, UAE</p>
+                    <p><span class="block text-[#c5a059] text-[10px] uppercase font-bold">Phone:</span> 04 256 8306</p>
+                    <p><span class="block text-[#c5a059] text-[10px] uppercase font-bold">Mobile:</span> +971 55 5566 247</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-[#c5a059] font-bold mb-6 uppercase tracking-widest text-[10px]">Connect & Locate</h4>
+                <div class="flex space-x-6 mb-8 items-center text-gray-500">
+                    <a href="https://www.instagram.com/awafivending" target="_blank" class="hover:text-[#c5a059] transition duration-300">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.148 3.228-1.667 4.771-4.919 4.919-1.266.058-1.644.069-4.85.069s-3.584-.011-4.85-.069c-3.26-.148-4.771-1.667-4.919-4.919-.059-1.265-.069-1.644-.069-4.85s.01-3.584.069-4.85c.148-3.252 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.073-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://x.com/awafivending" target="_blank" class="text-gray-500 hover:text-[#c5a059] transition duration-300">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://wa.me/971555566247" target="_blank" class="text-gray-500 hover:text-[#c5a059] transition duration-300">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    </a>
+                </div>
+                <a href="contact.html" class="inline-flex items-center text-xs text-[#c5a059] border-b border-[#c5a059] pb-1 hover:text-white transition group uppercase tracking-widest font-bold">
+                    View Location Map
+                </a>
+            </div>
+        </div>
+        <div class="text-center mt-20 text-gray-700 text-[10px] uppercase tracking-widest border-t border-white/5 pt-12">
+            © 2026 Awafia Vending LLC - Engineering Excellence
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        window.addEventListener('load', () => {
+            const tl = gsap.timeline();
+            tl.to("#hero-title", { opacity: 1, y: 0, duration: 1.2, ease: "power4.out" })
+              .to("#hero-sub", { opacity: 1, duration: 1 }, "-=0.8")
+              .to("#hero-btn", { opacity: 1, y: 0, duration: 1 }, "-=0.8");
+        });
+
+        gsap.utils.toArray('.gsap-reveal').forEach(el => {
+            gsap.from(el, { scrollTrigger: { trigger: el, start: "top 90%" }, y: 30, opacity: 0, duration: 1, ease: "power2.out" });
+        });
+
+        gsap.from(".gsap-reveal-left", { scrollTrigger: { trigger: ".gsap-reveal-left", start: "top 80%" }, x: -50, opacity: 0, duration: 1.5, ease: "power2.out" });
+        gsap.from(".gsap-reveal-right", { scrollTrigger: { trigger: ".gsap-reveal-right", start: "top 80%" }, x: 50, opacity: 0, duration: 1.5, ease: "power2.out" });
+    </script>
+</body>
+</html>

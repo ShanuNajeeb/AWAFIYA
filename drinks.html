@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet Collection | Awafia Roastery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+        
+        :root {
+            --espresso: #1a0f0a;
+            --gold: #c5a059;
+            --cream: #f9f5f0;
+        }
+
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: var(--cream); 
+            color: var(--espresso); 
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; }
+
+        /* Premium Card Hover */
+        .drink-item img {
+            transition: transform 1.2s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+        .drink-item:hover img {
+            transform: scale(1.08);
+        }
+
+        /* WhatsApp Button Animation */
+        .whatsapp-pulse {
+            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden pt-20">
+
+    <nav class="fixed top-0 w-full z-50 bg-[#1a0f0a]/95 backdrop-blur-md text-white py-5 px-8 flex justify-between items-center border-b border-[#c5a059]/20">
+        <div class="text-2xl font-bold tracking-[0.2em] uppercase text-[#c5a059]">Awafia</div>
+        <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.2em] font-semibold">
+            <a href="index.html" class="hover:text-[#c5a059] transition">Home</a>
+            <a href="about.html" class="hover:text-[#c5a059] transition">About</a>
+            <a href="products.html" class="hover:text-[#c5a059] transition">Machines</a>
+            <a href="drinks.html" class="text-[#c5a059]">Roastery</a>
+            <a href="contact.html" class="hover:text-[#c5a059] transition">Contact</a>
+        </div>
+    </nav>
+
+    <header class="relative h-[70vh] flex items-center justify-center bg-[#1a0f0a] overflow-hidden">
+        <div class="absolute inset-0 opacity-60">
+            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80" 
+                 class="w-full h-full object-cover" alt="Awafia Coffee Experience">
+        </div>
+        <div class="relative z-10 text-center px-8">
+            <span class="text-[#c5a059] uppercase tracking-[0.5em] text-[10px] block mb-6 gsap-reveal">About Our Drinks</span>
+            <h1 class="text-white text-5xl md:text-8xl mb-8 opacity-0" id="hero-title">Innovative Drinks</h1>
+        </div>
+    </header>
+
+    <section class="py-24 px-8 max-w-5xl mx-auto text-center border-b border-gray-100">
+        <p class="text-xl md:text-2xl text-gray-700 italic font-light leading-relaxed gsap-reveal">
+            "There is nothing better than charming coffee or tea aroma which flows into your sleepy morning. Everyday millions of people enjoy their lives by drinking a fragrant dark morning drink. Here we are introducing our innovative drinks".
+        </p>
+    </section>
+
+    <section class="py-24 px-8 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-24">
+            
+            <div class="drink-item gsap-reveal">
+                <div class="overflow-hidden aspect-square bg-gray-100 mb-6 rounded-sm shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&q=80" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-2xl mb-1 uppercase tracking-tight text-[#1a0f0a]">Espresso</h3>
+                <p class="text-[#c5a059] text-[10px] uppercase tracking-widest font-bold">The Pure Essence</p>
+            </div>
+
+            <div class="drink-item gsap-reveal">
+                <div class="overflow-hidden aspect-square bg-gray-100 mb-6 rounded-sm shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?auto=format&fit=crop&q=80" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-2xl mb-1 uppercase tracking-tight text-[#1a0f0a]">Americano</h3>
+                <p class="text-[#c5a059] text-[10px] uppercase tracking-widest font-bold">Bold & Balanced</p>
+            </div>
+
+            <div class="drink-item gsap-reveal">
+                <div class="overflow-hidden aspect-square bg-gray-100 mb-6 rounded-sm shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1536939459926-301728717817?auto=format&fit=crop&q=80" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-2xl mb-1 uppercase tracking-tight text-[#1a0f0a]">Cafe Latte</h3>
+                <p class="text-[#c5a059] text-[10px] uppercase tracking-widest font-bold">Silky & Creamy</p>
+            </div>
+
+            <div class="drink-item gsap-reveal">
+                <div class="overflow-hidden aspect-square bg-gray-100 mb-6 rounded-sm shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&q=80" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-2xl mb-1 uppercase tracking-tight text-[#1a0f0a]">Cappuccino</h3>
+                <p class="text-[#c5a059] text-[10px] uppercase tracking-widest font-bold">Classic Froth</p>
+            </div>
+
+            <div class="drink-item gsap-reveal">
+                <div class="overflow-hidden aspect-square bg-gray-100 mb-6 rounded-sm shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1444418185997-1145401101e0?auto=format&fit=crop&q=80" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-2xl mb-1 uppercase tracking-tight text-[#1a0f0a]">Cafe Mocha</h3>
+                <p class="text-[#c5a059] text-[10px] uppercase tracking-widest font-bold">Gourmet Fusion</p>
+            </div>
+
+            <div class="drink-item gsap-reveal">
+                <div class="overflow-hidden aspect-square bg-gray-100 mb-6 rounded-sm shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1594631252845-29fc458631b6?auto=format&fit=crop&q=80" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-2xl mb-1 uppercase tracking-tight text-[#1a0f0a]">Cardamom Tea</h3>
+                <p class="text-[#c5a059] text-[10px] uppercase tracking-widest font-bold">Regional Tradition</p>
+            </div>
+
+            <div class="drink-item gsap-reveal">
+                <div class="overflow-hidden aspect-square bg-gray-100 mb-6 rounded-sm shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?auto=format&fit=crop&q=80" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-2xl mb-1 uppercase tracking-tight text-[#1a0f0a]">Lemon Tea</h3>
+                <p class="text-[#c5a059] text-[10px] uppercase tracking-widest font-bold">Bright & Zesty</p>
+            </div>
+
+            <div class="drink-item gsap-reveal">
+                <div class="overflow-hidden aspect-square bg-gray-100 mb-6 rounded-sm shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?auto=format&fit=crop&q=80" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-2xl mb-1 uppercase tracking-tight text-[#1a0f0a]">Masala Tea</h3>
+                <p class="text-[#c5a059] text-[10px] uppercase tracking-widest font-bold">Aromatic Spices</p>
+            </div>
+
+            <div class="drink-item gsap-reveal">
+                <div class="overflow-hidden aspect-square bg-gray-100 mb-6 rounded-sm shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1515696455673-c58ad4c892b3?auto=format&fit=crop&q=80" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-2xl mb-1 uppercase tracking-tight text-[#1a0f0a]">Ginger Tea</h3>
+                <p class="text-[#c5a059] text-[10px] uppercase tracking-widest font-bold">Warming & Natural</p>
+            </div>
+
+            <div class="drink-item gsap-reveal">
+                <div class="overflow-hidden aspect-square bg-gray-100 mb-6 rounded-sm shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1544787210-2211d7c86294?auto=format&fit=crop&q=80" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-2xl mb-1 uppercase tracking-tight text-[#1a0f0a]">Hot Chocolate</h3>
+                <p class="text-[#c5a059] text-[10px] uppercase tracking-widest font-bold">Pure Indulgence</p>
+            </div>
+
+        </div>
+    </section>
+
+    <a href="https://wa.me/971555566247" target="_blank" class="fixed bottom-8 right-8 z-[100] bg-[#25D366] w-16 h-16 rounded-full flex items-center justify-center shadow-2xl whatsapp-pulse hover:scale-110 transition duration-300">
+        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+        <footer class="bg-[#1a0f0a] text-white pt-24 pb-12 border-t border-[#c5a059]/10">
+        <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-4 gap-12 md:gap-16">
+            <div class="space-y-8">
+                <div class="text-2xl font-bold tracking-widest text-[#c5a059]">AWAFIA</div>
+                <p class="text-gray-500 text-xs leading-loose">The exclusive manufacturer and supplier of fresh roast gourmet coffees and premium vending systems.</p>
+            </div>
+            <div>
+                <h4 class="text-[#c5a059] font-bold mb-6 uppercase tracking-widest text-[10px]">Product Line</h4>
+                <ul class="space-y-3 text-gray-500 text-xs font-medium tracking-wider">
+                    <li><a href="products.html" class="hover:text-[#c5a059] transition uppercase">Minifresh Series</a></li>
+                    <li><a href="products.html" class="hover:text-[#c5a059] transition uppercase">Brizta Series</a></li>
+                    <li><a href="products.html" class="hover:text-[#c5a059] transition uppercase">Snack Vending</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[#c5a059] font-bold mb-6 uppercase tracking-widest text-[10px]">Headquarters</h4>
+                <div class="text-gray-500 text-xs leading-relaxed space-y-4">
+                    <p>Al Qusais, P.O Box 183659 <br>Dubai, UAE</p>
+                    <p><span class="block text-[#c5a059] text-[10px] uppercase font-bold">Phone:</span> 04 256 8306</p>
+                    <p><span class="block text-[#c5a059] text-[10px] uppercase font-bold">Mobile:</span> +971 55 5566 247</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-[#c5a059] font-bold mb-6 uppercase tracking-widest text-[10px]">Connect & Locate</h4>
+                <div class="flex space-x-6 mb-8 items-center text-gray-500">
+                    <a href="https://www.instagram.com/awafivending" target="_blank" class="hover:text-[#c5a059] transition duration-300">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.148 3.228-1.667 4.771-4.919 4.919-1.266.058-1.644.069-4.85.069s-3.584-.011-4.85-.069c-3.26-.148-4.771-1.667-4.919-4.919-.059-1.265-.069-1.644-.069-4.85s.01-3.584.069-4.85c.148-3.252 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.073-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://x.com/awafivending" target="_blank" class="text-gray-500 hover:text-[#c5a059] transition duration-300">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://wa.me/971555566247" target="_blank" class="text-gray-500 hover:text-[#c5a059] transition duration-300">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    </a>
+                </div>
+                <a href="contact.html" class="inline-flex items-center text-xs text-[#c5a059] border-b border-[#c5a059] pb-1 hover:text-white transition group uppercase tracking-widest font-bold">
+                    View Location Map
+                </a>
+            </div>
+        </div>
+        <div class="text-center mt-20 text-gray-700 text-[10px] uppercase tracking-widest border-t border-white/5 pt-12">
+            © 2026 Awafia Vending LLC - Engineering Excellence
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        window.addEventListener('load', () => {
+            gsap.to("#hero-title", { opacity: 1, y: 0, duration: 1.5, ease: "power4.out" });
+            
+            gsap.utils.toArray('.gsap-reveal').forEach((el, i) => {
+                gsap.from(el, {
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 90%",
+                    },
+                    y: 40,
+                    opacity: 0,
+                    duration: 1.2,
+                    delay: i % 3 * 0.1, // Staggering elements for a smoother flow
+                    ease: "power2.out"
+                });
+            });
+        });
+    </script>
+</body>
+</html>

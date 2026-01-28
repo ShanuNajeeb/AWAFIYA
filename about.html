@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | Awafia Vending LLC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+        
+        :root {
+            --espresso: #1a0f0a;
+            --gold: #c5a059;
+            --cream: #f9f5f0;
+        }
+
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--cream); color: var(--espresso); line-height: 1.7; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; }
+
+        /* Perfect Infinite Logo Loop Fix */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-wrapper { overflow: hidden; width: 100%; position: relative; }
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marquee 25s linear infinite;
+            align-items: center;
+        }
+        .marquee-track:hover { animation-play-state: paused; }
+
+        .whatsapp-pulse {
+            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden pt-20">
+
+    <nav class="fixed top-0 w-full z-50 bg-[#1a0f0a]/95 backdrop-blur-md text-white py-5 px-8 flex justify-between items-center border-b border-[#c5a059]/20">
+        <div class="text-2xl font-bold tracking-[0.2em] uppercase text-[#c5a059]">Awafia</div>
+        <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.2em] font-semibold">
+            <a href="index.html" class="hover:text-[#c5a059] transition">Home</a>
+            <a href="about.html" class="text-[#c5a059]">About</a>
+            <a href="products.html" class="hover:text-[#c5a059] transition">Machines</a>
+            <a href="drinks.html" class="hover:text-[#c5a059] transition">Roastery</a>
+            <a href="contact.html" class="hover:text-[#c5a059] transition">Contact</a>
+        </div>
+    </nav>
+
+    <header class="relative h-[60vh] flex items-center justify-center bg-[#1a0f0a] overflow-hidden">
+        <div class="absolute inset-0 opacity-40">
+            <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-10 text-center px-8">
+            <span class="text-[#c5a059] uppercase tracking-[0.5em] text-xs block mb-4 gsap-reveal">About Our Company</span>
+            <h1 class="text-white text-5xl md:text-8xl opacity-0" id="hero-title">Awafi Vending LLC</h1>
+        </div>
+    </header>
+
+    <section class="py-24 px-8 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-20 items-center">
+            <div class="gsap-reveal-left">
+                <p class="text-xl md:text-2xl text-gray-800 font-light leading-relaxed mb-8">
+                    Awafi Vending LLC is proud to be the exclusive manufacturer and supplier of fresh roast, finest ground gourmet coffees and coffee machines and equipments. 
+                </p>
+                <p class="text-gray-600 mb-6">
+                    We are dedicated to the idea that each of us can change the world we live in by simply changing the way we consume. We have a large and diverse selection of products and services so developing the perfect coffee program for you is no problem.
+                </p>
+                <p class="text-gray-600 mb-6 italic border-l-4 border-[#c5a059] pl-6 py-2 bg-gray-50">
+                    "We are dedicated, methodical, deliver on promises, and believe that a handshake seals the deal".
+                </p>
+            </div>
+            <div class="gsap-reveal-right">
+                <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80" class="w-full h-[500px] object-cover shadow-2xl rounded-sm">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white px-8 border-y border-gray-100">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-start">
+            <div class="gsap-reveal-left order-2 md:order-1">
+                <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&q=80" class="w-full h-[600px] object-cover rounded-sm shadow-xl">
+            </div>
+            <div class="gsap-reveal-right order-1 md:order-2 space-y-8">
+                <h2 class="text-4xl">Unparalleled Service Excellence</h2>
+                <p class="text-gray-600">
+                    Our gourmet coffees, teas, coffee machines, café essentials, training, installation, repair, and experienced and friendly staff all ensure that you run a successful business. We are committed to selling the finest products in the world, as well as giving back to the people and communities that make it possible. 
+                </p>
+                <p class="text-gray-600">
+                    We are a reliable company in UAE, Qatar, Oman and Saudi Arabia providing a one-stop solution that includes the rental & sale of vending machines, installation, repair and maintenance service, and technical support.
+                </p>
+                <div class="bg-[#1a0f0a] p-10 text-white rounded-sm">
+                    <h4 class="text-[#c5a059] uppercase tracking-widest text-xs mb-6">Our Objective</h4>
+                    <p class="text-lg italic mb-6">"To put it simply, we want our customers to smile and our business partners to prosper".</p>
+                    <p class="text-gray-400 text-sm">We aim to exceed customers’ expectations by doing more, quickly and better than they expect.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-[#1a0f0a] border-y border-[#c5a059]/20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-8 mb-12 text-center">
+            <h4 class="text-[#c5a059] uppercase tracking-[0.4em] text-[10px] font-bold">Trusted by Regional Leaders</h4>
+        </div>
+        <div class="marquee-wrapper">
+            <div class="marquee-track">
+                <div class="flex items-center space-x-24 px-12">
+                    <img src="images/Eand.svg.png" class="h-10 opacity-90 transition" alt="Etisalat">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Emirates_logo.svg" class="h-12 opacity-90 transition" alt="Emirates">
+                    <span class="text-xl font-black text-[#c5a059] tracking-tighter uppercase">Dubai Holding</span>
+                </div>
+                <div class="flex items-center space-x-24 px-12">
+                    <img src="images/Eand.svg.png" class="h-10 opacity-90 transition">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Emirates_logo.svg" class="h-12 opacity-90 transition">
+                    <span class="text-xl font-black text-[#c5a059] tracking-tighter uppercase">Dubai Holding</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-8 max-w-7xl mx-auto border-t border-gray-100">
+        <div class="grid md:grid-cols-3 gap-16">
+            <div class="md:col-span-2 space-y-6">
+                <h2 class="text-3xl">Tailored Rental & Rental Solutions</h2>
+                <p class="text-gray-600">
+                    We have been a known provider of vending machines rental in UAE, Qatar, Oman and Saudi Arabia for years. We place a special emphasis on fulfilling customers’ vending machine rental needs and delighting them. 
+                </p>
+                <p class="text-gray-600">
+                    Whether you need the help of vending machines Rental Service Qatar or reliable Vending Machines Rental UAE, we offer user-friendly, energy-saving, and compatible machines that suit small and large businesses alike.
+                </p>
+            </div>
+            <div class="bg-[#c5a059]/5 p-8 border border-[#c5a059]/20">
+                <h4 class="text-[#c5a059] uppercase tracking-widest text-[10px] mb-4">Support & Care</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    Our team is ever available to assist in any technical hitch so that you can operate well in your vending needs. Our goal is simple: to provide the best products and services.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-[#1a0f0a] text-white px-8">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+            <div class="gsap-reveal space-y-6">
+                <h4 class="text-[#c5a059] uppercase tracking-widest text-[10px]">Vision</h4>
+                <p class="text-sm text-gray-400 leading-loose">
+                    Focuses on being a leader in the coffee industry, with an unyielding passion for bringing a European Café Experience regardless of the brewing method.
+                </p>
+            </div>
+            <div class="gsap-reveal space-y-6">
+                <h4 class="text-[#c5a059] uppercase tracking-widest text-[10px]">Service</h4>
+                <p class="text-sm text-gray-400 leading-loose">
+                    Serving with consistency, integrity and excellence is a responsibility. We aim to exceed expectations and support our partners and employees in every way.
+                </p>
+            </div>
+            <div class="gsap-reveal space-y-6">
+                <h4 class="text-[#c5a059] uppercase tracking-widest text-[10px]">Core Value</h4>
+                <p class="text-sm text-gray-400 leading-loose">
+                    We rely on absolute integrity, working with passion and an uncompromising commitment to quality, focusing on strong relationships and respect.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/971555566247" target="_blank" class="fixed bottom-8 right-8 z-[100] bg-[#25D366] w-16 h-16 rounded-full flex items-center justify-center shadow-2xl whatsapp-pulse hover:scale-110 transition duration-300">
+        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <footer class="bg-[#1a0f0a] text-white pt-24 pb-12 border-t border-[#c5a059]/10">
+        <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-4 gap-12 md:gap-16">
+            <div class="space-y-8">
+                <div class="text-2xl font-bold tracking-widest text-[#c5a059]">AWAFIA</div>
+                <p class="text-gray-500 text-xs leading-loose">
+                    The exclusive manufacturer and supplier of fresh roast, finest ground gourmet coffees and premium coffee machines and equipment across the Middle East.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-[#c5a059] font-bold mb-6 uppercase tracking-widest text-[10px]">Product Line</h4>
+                <ul class="space-y-3 text-gray-500 text-xs font-medium tracking-wider">
+                    <li><a href="products.html" class="hover:text-[#c5a059] transition uppercase">Minifresh Series</a></li>
+                    <li><a href="products.html" class="hover:text-[#c5a059] transition uppercase">Brizta Series</a></li>
+                    <li><a href="products.html" class="hover:text-[#c5a059] transition uppercase">Snack Vending</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[#c5a059] font-bold mb-6 uppercase tracking-widest text-[10px]">Headquarters</h4>
+                <div class="text-gray-500 text-xs leading-relaxed space-y-4">
+                    <p>Al Qusais, P.O Box 183659 <br>Dubai, UAE</p>
+                    <p><span class="block text-[#c5a059] text-[10px] uppercase font-bold">Phone:</span> 04 256 8306</p>
+                    <p><span class="block text-[#c5a059] text-[10px] uppercase font-bold">Mobile:</span> +971 55 5566 247</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-[#c5a059] font-bold mb-6 uppercase tracking-widest text-[10px]">Connect & Locate</h4>
+                <div class="flex space-x-6 mb-8 items-center text-gray-500">
+                    <a href="https://www.instagram.com/awafivending" target="_blank" class="hover:text-[#c5a059] transition duration-300">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.148 3.228-1.667 4.771-4.919 4.919-1.266.058-1.644.069-4.85.069s-3.584-.011-4.85-.069c-3.26-.148-4.771-1.667-4.919-4.919-.059-1.265-.069-1.644-.069-4.85s.01-3.584.069-4.85c.148-3.252 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.073-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://x.com/awafivending" target="_blank" class="hover:text-[#c5a059] transition duration-300">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://wa.me/971555566247" target="_blank" class="hover:text-[#c5a059] transition duration-300">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    </a>
+                </div>
+                <a href="contact.html" class="inline-flex items-center text-xs text-[#c5a059] border-b border-[#c5a059] pb-1 hover:text-white transition group uppercase tracking-widest font-bold">
+                    View Location Map
+                </a>
+            </div>
+        </div>
+        <div class="text-center mt-20 text-gray-700 text-[10px] uppercase tracking-widest border-t border-white/5 pt-12">
+            © 2026 Awafia Vending LLC - Engineering Excellence
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        window.addEventListener('load', () => {
+            gsap.to("#hero-title", { opacity: 1, y: 0, duration: 1.5, ease: "power4.out" });
+        });
+        gsap.utils.toArray('.gsap-reveal').forEach(el => {
+            gsap.from(el, { scrollTrigger: { trigger: el, start: "top 90%" }, y: 30, opacity: 0, duration: 1 });
+        });
+        gsap.from(".gsap-reveal-left", { scrollTrigger: { trigger: ".gsap-reveal-left", start: "top 80%" }, x: -50, opacity: 0, duration: 1.2 });
+        gsap.from(".gsap-reveal-right", { scrollTrigger: { trigger: ".gsap-reveal-right", start: "top 80%" }, x: 50, opacity: 0, duration: 1.2 });
+    </script>
+</body>
+</html>
